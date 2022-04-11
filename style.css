@@ -15,36 +15,52 @@ body{
     margin: 0;
     background:linear-gradient(270deg,var(--clr-black),var(--clr-dark-blue));
 }
-main, .button-container{
+main, .wrap{
+    margin: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
-
+}
+.wrap{
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 100px;
 }
 .button-container{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    justify-self: flex-start;
+    gap: 15px;
     align-items: flex-start;
     margin-left: 250px;
 }
 #colorpicker{
     border-radius: 45px;
-
+    padding:0;
+    background: transparent;
+    border: none;
+}
+label, button{
+background-color: var(--clr-blue);
+color:var(--clr-grey);
+border-radius: 20px;
+transition: all .15s ease-in;
+font-size: 1.4em;
 }
 button{
-    background-color: var(--clr-blue);
-    color:var(--clr-grey);
-    font-size: 1.2em;
     padding: 20px 50px;
-    border-radius: 20px;
     font-family: 'lato';
-    transition: all .15s ease-in;
 }
-button:hover{
+button:hover, label:hover{
     transform: scale(1.25);
 }
 
 .container{
-    width: 250px;
+    width: 600px;
+    height: 500px;
     background: white;
+    place-self: flex-end;
 }
 h1{
     line-height: 1.6;
