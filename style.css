@@ -1,0 +1,41 @@
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+:root{
+    --clr-black:#0b0c10;
+    --clr-dark-blue:#1f2833;
+    --clr-grey:#c5c6c7;
+    --clr-light-blue:#66fcf1;
+    --clr-blue:#45a29e;
+    --fs-h1:4em;
+}
+body{
+    margin: 0;
+    background:linear-gradient(270deg,var(--clr-black),var(--clr-dark-blue));
+}
+main, .button-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+button{
+    background-color: var(--clr-blue);
+    color:var(--clr-grey);
+    font-size: 5em;
+    font-family: 'lato';
+}
+
+.container{
+    width: 250px;
+    background: white;
+}
+h1{
+    line-height: 1.6;
+    color: #66fcf1;
+    font-size: 100px;
+    font-family:'lato'
+}
