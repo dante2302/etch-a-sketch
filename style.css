@@ -9,7 +9,7 @@
     --clr-dark-blue:#1f2833;
     --clr-grey:#c5c6c7;
     --clr-light-blue:#66fcf1;
-    --clr-blue:#45a29e;
+    --clr-blue:#165e82;
 }
 body{
     margin: 0;
@@ -63,6 +63,8 @@ h1{
     background: none;
 }
 button{
+    border: 3px solid var(--clr-grey);
+    box-shadow: 1.5px 1.5px var(--clr-light-blue);
 background-color: var(--clr-blue);
 color:var(--clr-grey);
 border-radius: 20px;
@@ -83,10 +85,16 @@ label{
     font-weight: 700;
     font-size: 1.75em;
     font-family: 'lato';
-    color:var(--clr-light-blue);
+    color:var(--clr-grey);
 }
 button:hover{
     transform: scale(1.15);
+}
+.size{
+    background: var(--clr-grey);
+    color: var(--clr-dark-blue);
+    border-radius: 5px;
+    font-size: 2.em;
 }
 footer{
     margin: 5px 0;

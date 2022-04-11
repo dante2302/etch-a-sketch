@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const sizeButton = document.querySelector('.size');
 const rainbowButton = document.querySelector('.rainbow');
 const clearButton = document.querySelector('.clear');
 const eraser = document.querySelector('.eraser');
@@ -11,3 +12,5 @@ function getSize(){
     }
     return size;
 }
+
+
