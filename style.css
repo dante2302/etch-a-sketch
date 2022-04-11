@@ -45,29 +45,41 @@ h1{
     margin-left: 250px;
 }
 .container{
+    display: grid;
     margin-top: -40px;
     width: 550px;
     height: 650px;
     background: white;
     margin-left: 100px;
     place-self: flex-end;
+    border: 5px solid var(--clr-grey);
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px #245d6e;
 }
 #colorpicker{
-    transform: scale(2);
-    border-radius: 45px;
-    padding:0;
-    background: transparent;
+    margin: 10px 50px 20px 50px;
+    transform: scale(3.5);
+    border: none;
+    padding: none;
+    background: none;
 }
-label, button{
+button{
 background-color: var(--clr-blue);
 color:var(--clr-grey);
 border-radius: 20px;
 transition: all .15s ease-in;
 font-size: 1.4em;
+font-weight: 700;
 padding: 20px 50px;
 font-family: 'lato';
 }
+label{
+    font-weight: 700;
+    font-size: 1.4em;
+    font-family: 'lato';
+    color:var(--clr-light-blue);
+}
 button:hover{
-    transform: scale(1.25);
+    transform: scale(1.15);
 }
 
