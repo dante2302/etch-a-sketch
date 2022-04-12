@@ -57,6 +57,9 @@ h1{
 }
 .default{
     background: white;
+
+}
+.grid-lines{
     border: 1px solid black;
 }
 #colorpicker{
