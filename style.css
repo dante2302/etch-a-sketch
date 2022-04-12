@@ -44,7 +44,8 @@ h1{
     align-items: flex-start;
 }
 .container{
-    display: grid;
+    display:grid;
+    grid-gap: 0;
     margin-block: -40px 20px;
     width: 768px;
     height: 768px;
@@ -65,8 +66,8 @@ h1{
     background: none;
 }
 button{
-    border: 3px solid var(--clr-grey);
-    box-shadow: 1.5px 1.5px var(--clr-light-blue);
+border: 3px solid var(--clr-grey);
+box-shadow: 1.5px 1.5px var(--clr-light-blue);
 background-color: var(--clr-blue);
 color:var(--clr-grey);
 border-radius: 20px;
