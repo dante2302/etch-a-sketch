@@ -48,12 +48,14 @@ h1{
     margin-block: -40px 20px;
     width: 768px;
     height: 768px;
-    background: white;
     margin-left: 100px;
     place-self: flex-end;
     border: 5px solid var(--clr-grey);
     border-radius: 3px;
     box-shadow: 10px 10px 5px #245d6e;
+}
+.default{
+    background: white;
 }
 #colorpicker{
     margin: 40px 100px 40px 100px;
