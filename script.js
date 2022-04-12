@@ -2,6 +2,7 @@ const sizeButton = document.querySelector('.size');
 const rainbowButton = document.querySelector('.rainbow');
 const colorPicker = document.querySelector('#colorpicker')
 const clearButton = document.querySelector('.clear');
+const gridLinesButton = document.querySelector('.grid-lines');
 const pane = document.querySelector('.container');
 const eraser = document.querySelector('.eraser');
 
@@ -19,32 +20,36 @@ function makePane(){
     pane.style.gridTemplateColumns = `repeat(${size}, auto)`;
     pane.style.gridTemplateRows = `repeat(${size}, auto)`;
     let newElements = []; // declare an array for the new divs
-    for(let i = 0;i<size**2;i++){
+    for(let i = 0;i<size*size;i++){
         newElements[i] = document.createElement('div');
         newElements[i].classList.add('default');
-    }
-    for(let i = 0;i<size**2;i++){
+    }// create new divs
+    for(let i = 0;i<size*size;i++){
         pane.appendChild(newElements[i])
-    }
-    for(let i = 0;i<size**2;i++){
+    }// append new divs
+    for(let i = 0;i<size*size;i++){
         newElements[i].addEventListener('dragover',()=>{
+
             newElements[i].style.backgroundColor = "red"})
-        }
+    }// add event listeners to new divs
 }   
-
-
+function clearPane(){
+    let count = pane.childElementCount;
+    while(pane.firstChild){
+        pane.removeChild(pane.lastChild)
+    }
+    makePane();
+}
+function toggleLines(){
+    pane.children.classList.toggle('grid-lines');
+}
 function eventListeners(){
 
 }
 
-function clearPane(){
-    for(let i =0;i<size;i++){
-        newElements[i].classList.add('.default')
-    }
-}
-
 sizeButton.addEventListener('click', ()=>makePane())
 clearButton.addEventListener('click', ()=>clearPane())
+gridLinesButton.addEventListener('click', ()=>toggleLines());
 
 
 
