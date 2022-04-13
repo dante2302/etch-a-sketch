@@ -76,21 +76,18 @@ background-color: var(--clr-blue);
 color:var(--clr-grey);
 border-radius: 20px;
 transition: all .15s ease-in;
-font-size: 1.75em;
+font-size: 1.35em;
 font-weight: 700;
-padding: 40px 60px;
+padding: 30px 40px;
 font-family: 'lato';
 }
-.rainbow{
-    padding:40px;
-}
 .eraser{
-    padding-block: 40px;
-    padding-inline: 55px;
+    padding-block: 30px;
+    padding-inline: 45px;
 }
 label{
     font-weight: 700;
-    font-size: 1.75em;
+    font-size: 1.35em;
     font-family: 'lato';
     color:var(--clr-grey);
 }
