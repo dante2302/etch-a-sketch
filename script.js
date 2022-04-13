@@ -25,8 +25,8 @@ function def(arr,i,color){
 
 function removeEventListeners(count){
     for(let i = 0;i<count;i++){
-        pane.childNodes[i].removeEventListener('mouseover',()=>{def(newElements,i,defaultColor)})
-        pane.childNodes[i].removeEventListener('mousedown',()=>{def(newElements,i,defaultColor)})
+        pane.childNodes[i].removeEventListener('mouseover',()=>{def(newElements,i)})
+        pane.childNodes[i].removeEventListener('mousedown',()=>{def(newElements,i)})
 
     }
 }
@@ -35,7 +35,7 @@ function makePane(){
     while(pane.firstChild){
         pane.removeChild(pane.lastChild)
     }
-    colorPicker.value = "#000000"
+    colorPicker.value = "#FFFFFF"
     let size = getSize(); 
     pane.style.gridTemplateColumns = `repeat(${size}, auto)`;
     pane.style.gridTemplateRows = `repeat(${size}, auto)`;
@@ -46,16 +46,11 @@ function makePane(){
     for(let i = 0;i<size*size;i++){
         pane.appendChild(newElements[i])
     }// append new divs
-    for(let i = 0;i<size*size;i++){
-        newElements[i].addEventListener('mouseover',()=>{def(newElements,i,defaultColor)})
-        newElements[i].addEventListener('mousedown',()=>{def(newElements,i,defaultColor)})
-    }// add event listeners to new divs
 }   
 
 
 function changeColor(value){
     count = pane.childElementCount;
-    removeEventListeners(count);
     for(let i = 0;i<count;i++){
         pane.childNodes[i].addEventListener('mouseover',()=>{def(newElements,i,value)})
         pane.childNodes[i].addEventListener('mousedown',()=>{def(newElements,i,value)})
